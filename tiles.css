@@ -1,0 +1,65 @@
+/*
+* Tiles - A layout style that stacks regions horizontally and vertically
+* with a "feature" option to make one of the tiles larger than the others.
+*/
+ul.tiles {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.tiles:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+ul.tiles li {
+	float:left;
+	position:relative;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.tiles li:before {
+	content: "";
+	display: block;
+	padding-top: 75%; /* This controls aspect ratio. (e.g. A value of 75% equals a 3/4 aspect ratio. A perfect square would be 100%.) */
+}
+
+/* two columns */
+ul.tiles.column-count-2 li { width:50%; }
+
+/* three columns */
+ul.tiles.column-count-3 li { width:33.33%; }
+ul.tiles.column-count-3 li.feature { width:66.66%; }
+
+/* four columns */
+ul.tiles.column-count-4 li { width:25%; }
+ul.tiles.column-count-4 li.feature { width:50%; }
+
+/* five columns */
+ul.tiles.column-count-5 li { width:20%; }
+ul.tiles.column-count-5 li.feature { width:40%; }
+
+/*
+* Inner 'sleeve' containers
+*/
+ul.tiles li div.sleeve {
+	position:absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow:hidden;
+
+	margin:0.5em;
+	padding:1em;
+}
+
+/*
+* Debugging
+*/
+.sleeve {
+	background:url() center 0 no-repeat #fcc;
+	background-size:150%;
+}
