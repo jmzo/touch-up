@@ -13,38 +13,38 @@ ul.tiles:after {
 	clear: both;
 }
 
-ul.tiles li {
+ul.tiles li.tile {
 	float:left;
 	position:relative;
 	margin:0;
 	padding:0;
 	list-style:none;
 }
-ul.tiles li:before {
+ul.tiles li.tile:before {
 	content: "";
 	display: block;
 	padding-top: 75%; /* This controls aspect ratio. (e.g. A value of 75% equals a 3/4 aspect ratio. A perfect square would be 100%.) */
 }
 
 /* two columns */
-ul.tiles.column-count-2 li { width:50%; }
+ul.tiles.column-count-2 li.tile { width:50%; }
 
 /* three columns */
-ul.tiles.column-count-3 li { width:33.33%; }
-ul.tiles.column-count-3 li.feature { width:66.66%; }
+ul.tiles.column-count-3 li.tile { width:33.33%; }
+ul.tiles.column-count-3 li.tile.feature { width:66.66%; }
 
 /* four columns */
-ul.tiles.column-count-4 li { width:25%; }
-ul.tiles.column-count-4 li.feature { width:50%; }
+ul.tiles.column-count-4 li.tile { width:25%; }
+ul.tiles.column-count-4 li.tile.feature { width:50%; }
 
 /* five columns */
-ul.tiles.column-count-5 li { width:20%; }
-ul.tiles.column-count-5 li.feature { width:40%; }
+ul.tiles.column-count-5 li.tile { width:20%; }
+ul.tiles.column-count-5 li.tile.feature { width:40%; }
 
 /*
 * Inner 'sleeve' containers
 */
-ul.tiles li div.sleeve {
+ul.tiles li.tile div.sleeve {
 	position:absolute;
 	top: 0;
 	left: 0;
