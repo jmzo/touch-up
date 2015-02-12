@@ -55,11 +55,3 @@ ul.tiles li.tile div.sleeve {
 	margin:0.5em;
 	padding:1em;
 }
-
-/*
-* Debugging
-*/
-.sleeve {
-	background:url() center 0 no-repeat #fcc;
-	background-size:150%;
-}
